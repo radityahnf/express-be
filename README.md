@@ -12,12 +12,12 @@
   ```json
   [
     {
-        id: ObjectID,
-        name: string
+        "id": "ObjectID",
+        "name": "string"
     },
     {
-        id: ObjectID,
-        name: string
+        "id": "ObjectID",
+        "name": "string"
     }
     ....
   ]
@@ -89,13 +89,13 @@
 - Request Body:
   ```json
   {
-  "email": string, is well formatted email
-  "password": string, | match confirm_password
-  "confirm_password": string | match password,
-  "name" : string,
-  "address": string,
-  "cityId":string, exist on collection city
-  "hobbies": array of string
+  "email": "string, is well formatted email",
+  "password": "string, | match confirm_password",
+  "confirm_password": "string | match password",
+  "name" : "string",
+  "address": "string",
+  "cityId": "string, exist on collection city",
+  "hobbies": "array of string"
   } 
     ```
 - Response Status: 
@@ -105,7 +105,7 @@
     - On Error: 
         ```json
         {
-        "email": "email tidak valid" || "email sudah digunakan",
+        "email": "email tidak valid || email sudah digunakan",
         "password": "password tidak valid",
         "confirm_password": "confirm password tidak valid",
         "password_equal": "password dan confirm_password harus sama",
@@ -124,8 +124,8 @@
 - Request Body:
   ```json
   {
-  "email": string, non well-formatted email,
-  "password": string
+  "email": "string, non well-formatted email",
+  "password": "string"
   }
     ```
 - Response Status: 
@@ -135,20 +135,20 @@
     - On Success: 
         ```json
         {
-            id: ObjectID,
-            email: string,
-            profile: {
-                name: string,
-                address: string,
-                city: {
-                id: ObjectID,
-                name: string
+            "id": "ObjectID",
+            "email" : "string",
+            "profile": {
+                "name": "string",
+                "address" : "string",
+                "city": {
+                "id": "ObjectID",
+                "name": "string",
                 },
-                hobbies: [array of string]
+                "hobbies": "[array of string]"
             },
-            last_login: Y-m-d datetime,
-            created_at: Y-m-d datetime,
-            updated_at: Y-m-d datetime
+            "last_login": "Y-m-d datetime",
+            "created_at": "Y-m-d datetime",
+            "updated_at": "Y-m-d datetime"
         }
         ```
 
@@ -171,9 +171,9 @@
 - Request Body:
   ```json
   {
-  "current_password": string | match current password,
-  "new_password": string | match confirm_new_password,
-  "confirm_new_password" : string | match password,
+  "current_password": "string | match current password",
+  "new_password": "string | match confirm_new_password",
+  "confirm_new_password" : "string | match password",
   }
     ```
 - Response Status: 
